@@ -1,12 +1,14 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Landing from './components/Landing';
+import './App.css';
 
 const app = () => {
   return (
-    <>
+    <div>
       <Navbar />
-      <div>Hello world</div>
-    </>
+      <Landing />
+    </div>
   );
 };
 
