@@ -93,11 +93,10 @@ test('Arrays and iterables', () => {
 });
 
 // Testing Throw errors
-function compileAndroidCode() {
-  throw new Error('You are using the wrong JDK!');
-}
-
 test('Compile throw error function goes as expected', () => {
+  function compileAndroidCode() {
+    throw new Error('You are using the wrong JDK!');
+  }
   expect(() => compileAndroidCode()).toThrow();
   expect(() => compileAndroidCode()).toThrow(Error);
 
@@ -105,3 +104,34 @@ test('Compile throw error function goes as expected', () => {
   expect(() => compileAndroidCode()).toThrow('You are using the wrong JDK!');
   expect(() => compileAndroidCode()).toThrow(/JDK/);
 });
+
+// _____________Asynchronous_________________
+
+test('The data is peanut butter using async/await', async () => {
+  function resolveAfter2Seconds() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve('peanut butter');
+      }, 1000);
+    });
+  }
+
+  const data = await resolveAfter2Seconds();
+  expect(data).toBe('peanut butter');
+
+  expect.assertions(1);
+  try {
+    await resolveAfter2Seconds();
+  } catch (e) {
+    expect(e).toMatch('error');
+  }
+});
+
+// test('The fetch fails with an error', async () => {
+//   expect.assertions(1);
+//   try {
+//     await resolveAfter2Seconds();
+//   } catch (e) {
+//     expect(e).toMatch('error');
+//   }
+// });
