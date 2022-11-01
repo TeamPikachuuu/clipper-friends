@@ -2,13 +2,16 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const app = () => {
   return (
-    <div>
+    <Router>
       <Navbar />
-      <Landing />
-    </div>
+      <Routes>
+        <Route path='/' element={<Landing />} />
+      </Routes>
+    </Router>
   );
 };
 

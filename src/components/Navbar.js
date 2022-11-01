@@ -5,7 +5,7 @@ const Navbar = () => {
   const links = (
     <ul>
       <li>
-        <p>Profile</p>
+        <Link to='#!'>Profile</Link>
       </li>
       <li>
         <p>Register</p>
@@ -18,7 +18,11 @@ const Navbar = () => {
 
   return (
     <nav className='navbar bg-dark'>
-      <h1>Clipper Friends</h1>
+      <h1>
+        <Link to='/'>
+          <i className='fa-solid fa-scissors'></i> Clipper Friends
+        </Link>
+      </h1>
       {links}
     </nav>
   );
