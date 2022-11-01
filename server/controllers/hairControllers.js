@@ -22,3 +22,5 @@ hairController.getInfo = (req, res, next) => {
         })
       })
   };
+
+  
