@@ -5,13 +5,10 @@ const Navbar = () => {
   const links = (
     <ul>
       <li>
-        <Link to='#!'>Profile</Link>
+        <Link to='/entry'>Entry</Link>
       </li>
       <li>
-        <Link to='#!'>Register</Link>
-      </li>
-      <li>
-        <Link to='#!'>Login</Link>
+        <Link to='/search'>Search</Link>
       </li>
     </ul>
   );
