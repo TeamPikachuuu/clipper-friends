@@ -7,7 +7,7 @@
     "start": "nodemon server/index.js",
     "build": "webpack --mode production",
     "test": "jest --verbose",
-    "dev": "concurrently \"cross-env NODE_ENV=development webpack serve\""
+    "dev": "concurrently \"cross-env NODE_ENV=development webpack serve\"  \" nodemon server/index.js \""
   },
   "repository": {
     "type": "git",
