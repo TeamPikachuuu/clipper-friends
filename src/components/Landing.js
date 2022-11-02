@@ -8,7 +8,7 @@ const Landing = () => {
           <h1 className='x-large'>Clipper's Friend</h1>
           <p className='lead'>
             Save your customer's style with ease, allowing you to focus on
-            what's important. The person in front of you
+            what's important: the person in front of you
           </p>
         </div>
       </div>
