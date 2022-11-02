@@ -17,10 +17,12 @@ const mockResponse = {
 app.use(express.static(DIST_DIR)); // NEW
 
 app.get('/data/:id', hairController.getInfo, (req, res)=> {
-
-  console.log('are we getting this far')
   res.status(200).json(res.locals.getInfo)
 })
+
+app.post('/data', hairController.addInfo, (req, res) => {
+  res.status(200).json("success");;
+});
 
 app.get('/api', (req, res) => {
   res.send(mockResponse);
