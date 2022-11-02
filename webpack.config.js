@@ -32,6 +32,11 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, 'src')
     },
-    open: true
+    open: true,
+    proxy: {
+      '/': {
+        target: 'http://localhost:3000'
+      }
+    }
   }
 };
